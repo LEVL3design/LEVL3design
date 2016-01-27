@@ -33,7 +33,8 @@
           --><div id="headerNav"><squarespace:navigation navigationId="mainNav" template="navigation" /></div>
         </div>
       </header>
-
+      
+<div id="custom-body">
       {.if item}
         {.section item}
           {.if productType}
@@ -208,6 +209,7 @@
         {.end}
         {.end}
       </main>
+</div>
 
       <div id="preFooter">
         <div class="pre-footer-inner">
