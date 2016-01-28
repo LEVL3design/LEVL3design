@@ -1,4 +1,4 @@
-// vARIABLES
+// vARIABLES ---------------------------------//
 
 @spaceBetweenNavItems: .7em;
 @navItemsHeight: .75em;
@@ -10,7 +10,10 @@
 @subnavPaddingVertical: 1em;
 @subnavPaddingHorizontal: 1.5em;
 @accentColor: #ebc713;
+@navUnderlineColor: #c5b358;
 
+
+// HEADER STUFF ----------------------------- //
 
 // Fixed header
 
@@ -41,9 +44,9 @@
 // underline nav elements upon hover
 
 #mainNavigation {
-  .collection:not(:last-child):hover {
+  .collection:not(:last-child):hover, .active {
   //text-decoration: underline;
-  //border-bottom: .5px solid @navActiveColor;
+  border-bottom: 1px solid @navUnderlineColor;
   //border-color: #ebc713;
   }
 }
@@ -73,6 +76,45 @@ body:not(.force-mobile-nav) {
   margin-left: @spaceBetweenNavItems;
 }
 
+
+// Change side of folder item in sidecar nav that "+" appears
+
+#sidecarNav .folder label:after {
+  content: '+';
+  padding-left: 0.25em;
+  width: 0.75em;
+  display: inline-block;
+}
+
+#sidecarNav .folder .folder-toggle-box:checked ~ label:after {
+  content:'–'
+} /* NOTE: To get this to work, I rcommented out the the code from base.less right after the section called "folder indicator everywhere in mobile style nav" */
+
+
+// Adjust height of subnav items
+
+html:not(.touch-styles) body:not(.force-mobile-nav) .nav-wrapper .folder .subnav>div a {
+  padding: @subnavPaddingVertical @subnavPaddingHorizontal;
+}
+
+// Change cursor for folders to be pointer and unclickable
+
+#mainNavigation {
+  .folder-toggle-label {
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+// Nav arrow color tweak
+
+#navArrowColor {
+  color: @navColor;
+}
+
+#navArrowColor:hover {
+  color: @navActiveColor;
+}
 
 
 
