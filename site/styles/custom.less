@@ -45,11 +45,22 @@
 // underline nav elements upon hover
 
 #mainNavigation {
-  .collection:not(:last-child):hover, .active {
+  .collection:hover, .index:hover, .external:not(:last-child):hover , {
   //text-decoration: underline;
   border-bottom: 1px solid @navUnderlineColor;
   //border-color: #ebc713;
   }
+}
+
+#mainNavigation {
+.active {
+border-bottom: 2px solid @navUnderlineColor;
+}
+}
+
+.enable-nav-button #headerNav,
+.enable-nav-button #sidecarNav {
+  border-bottom: 0px solid !important;
 }
 
 
