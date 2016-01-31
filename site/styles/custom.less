@@ -12,6 +12,7 @@
 @accentColor: #ebc713;
 @navUnderlineColor: #c5b358;
 @socialButtonColor: #c5b358;
+@folderNavTitleFontMobile: 23px;
 
 
 // HEADER STUFF ----------------------------- //
@@ -134,8 +135,58 @@ html:not(.touch-styles) body:not(.force-mobile-nav) .nav-wrapper .folder .subnav
   fill: @socialButtonColor;
 }
 
-// Remove back-to-top empty space (which only appears on mobile)
+// Remove back-to-top empty space in footer of mobile (for some reason, this problem only appeared on mobile)
 div.nav-wrapper.back-to-top-nav {
   display: none !important;
 }
+
+
+// Fix the default styling for folder side nav (a real hackjob, but got the job done)
+
+@media only screen and (max-width: 640px) {
+
+  #folderNav #folderNavToggle:checked {
+      + .folder-nav-toggle-label {
+        z-index: 0;
+        &:after {
+          content: '–';
+        }
+      }
+      ~ .folder-nav {
+        li:not(.active-link) {
+          display: block;
+            &.nav-section-label {
+            display: block; 
+            font-size: 23px !important;
+          } 
+        }
+      }
+    }
+
+
+  #folderNav li:not(.filter), #categoryNav li:not(.filter) {
+      display: block;
+  }
+
+  .category-nav .nav-section-label, .folder-nav .nav-section-label {
+    font-size: @folderNavTitleFontMobile !important;
+    font-weight: 300;
+  }
+  #folderNav li {
+    padding-top: 0em;
+    padding-bottom: 0em;
+  }
+  .folder-nav-toggle-label:after, .category-nav-toggle-label:after {
+    content: none;
+  }
+  #folderNav #folderNavToggle:checked+.folder-nav-toggle-label:after {
+    content: none;
+  }
+} 
+
+
+
+
+
+
 
