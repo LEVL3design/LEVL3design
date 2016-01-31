@@ -1,0 +1,4 @@
+<!-- code for folder nav, copied from original site.region file --!>
+
+{.collectionTypeNameEquals? page}<!-- comment the linebreak between these two elements because science
+        --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}

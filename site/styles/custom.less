@@ -43,6 +43,17 @@
       //    box-sizing: border-box;
 }
 
+// Index page width
+
+.collection-type-index .page-content {
+    max-width: @pageWidth - 2*@sitePadding;
+    margin: 0 auto;
+    padding-left: @sitePadding;
+    padding-right: @sitePadding;
+    padding-top: 3*@sitePadding;
+    padding-bottom: 3*@sitePadding;
+  }
+
 // underline nav elements upon hover
 
 #mainNavigation {
@@ -143,6 +154,8 @@ div.nav-wrapper.back-to-top-nav {
 
 // Fix the default styling for folder side nav (a real hackjob, but got the job done)
 
+
+
 @media only screen and (max-width: 640px) {
 
   #folderNav #folderNavToggle:checked {
@@ -184,9 +197,12 @@ div.nav-wrapper.back-to-top-nav {
   }
 } 
 
-
-
-
+/*
+li.page-collection:hover {
+    text-decoration: underline;
+    color: #000 !important;
+}
+*/
 
 
 

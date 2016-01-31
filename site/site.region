@@ -201,7 +201,8 @@
             </ul>
           </nav>
         </div>{.end}{.end}<!-- comment the linebreak between these two elements because science
-        --><!--folder nav which LEVL3 removed goes here --!><!-- comment the linebreak between these two elements because science
+        --><!--folder nav goes here --!>{.collectionTypeNameEquals? page}<!-- comment the linebreak between these two elements because science
+        --><squarespace:folder-navigation template="folder-navigation" />{.end}{.end}<!-- comment the linebreak between these two elements because science
         --><div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "gallery"}{.or}{.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}{.end}>
          {squarespace.main-content}
         </div><!-- comment the linebreak between these two elements because science
