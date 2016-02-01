@@ -18,6 +18,7 @@
 @socialButtonColor: #98883a;
 @folderNavTitleFontMobile: 23px;
 @commentButtonColor: #98883a;
+@sidebarButtonColor: #98883a;
 
 
 // HEADER STUFF ----------------------------- //
@@ -64,7 +65,7 @@
 #mainNavigation {
   .collection:hover, .index:hover, .external:not(:last-child):hover , {
   //text-decoration: underline;
-  border-bottom: 1px solid @navUnderlineColor;
+  border-bottom: 2px solid @navUnderlineColor;
   //border-color: #ebc713;
   }
 }
@@ -228,6 +229,17 @@ li.page-collection:hover {
 }
 
 
+.sqs-block-button .sqs-block-button-element--small, .sqs-block-button-element--medium, .sqs-block-button-element--large  {
+    color: #fff;
+    background-color: @sidebarButtonColor;
+    border-color: #1f1f1f;
+}
+
+// logo wrapper underline
+
+#logoWrapper:hover {
+  border-bottom: 2px solid @navUnderlineColor;
+}
 
 
 
